@@ -16,10 +16,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i = 0; $i < 10; $i++){
+        for ($i = 0; $i < 100; $i++){
             $newtrain = new Train();
             $newtrain->azienda = $faker->name;
-            $newtrain->stazione_di_partenza = $faker->sentence(4, true);
+            $newtrain->stazione_di_partenza = $faker->sentence(3, true);
+            $newtrain->stazione_di_arrivo = $faker->sentence(3, true);
             $newtrain->orario_di_partenza = $faker->dateTimeBetween("-1 days", "+1 week");
             $newtrain->orairo_di_arrivo = $faker->dateTimeBetween("-1 day", "+1 week");
             $newtrain->codice_treno = $faker->bothify('????-####');
