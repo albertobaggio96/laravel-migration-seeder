@@ -12,11 +12,13 @@
     @vite('resources/js/app.js')
 </head>
 <body>
-    @dump($trains)
-    @foreach($trains as $train)
-    <div>
-        {{$train}}
-    </div>
-    @endforeach
+    <main>
+        <section id="trains" class="row">
+        @foreach($trains as $train)
+            
+        @endforeach
+        </section>
+
+    </main>
 </body>
 </html>
